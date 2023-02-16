@@ -53,7 +53,7 @@ const routes = [
         path: '/login',
         handler: (request, h) => {
             const { username, password } = request.payload;
-            return `Welcome ${username}!`;
+            return h.response(`Welcome ${username}!`).code(201);
         }
     }
 ];
